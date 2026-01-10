@@ -49,6 +49,8 @@ theme = "PaperMod"
 
     # ... 其他配置 ...
     showBreadCrumbs = true # 开启面包屑导航，能让标签页更有层次感
+    EditPost = { URL = "https://github.com/Hughpig/my-blog/blob/main/content", Text = "编辑此页" } # 顺便加个编辑按钮
+    ShowScrollToTop = true # 开启回到顶部按钮
 
     # --- 首页精修 (Profile Mode) ---
     [params.profileMode]
@@ -77,8 +79,10 @@ theme = "PaperMod"
 # --- 代码高亮配置 ---
 [markup.highlight]
     noClasses = false
-    style = "monokai" # 经典的黑底高亮，很有写代码的感觉
-    lineNos = true    # 显示行号
+    style = "monokai"   # 推荐这个，暗色模式下非常清晰
+    lineNos = true          # 显示行号
+    lineNumbersInTable = false # 行号不放在表格里，方便复制
+    tabWidth = 4            # 符合 OI 习惯
 
 # --- 让 Markdown 渲染更智能 ---
 [markup.goldmark.renderer]
