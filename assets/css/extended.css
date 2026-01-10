@@ -1,0 +1,13 @@
+/* 强制首页按钮在小屏幕也不要显得太臃肿 */
+.profile_inner .buttons .button {
+    padding: 0 12px;      /* 减小按钮左右内边距 */
+    margin: 5px 4px;      /* 减小按钮间距 */
+    font-size: 14px;      /* 稍微调小字号 */
+}
+
+/* 让按钮容器允许更灵活的排列 */
+.profile_inner .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

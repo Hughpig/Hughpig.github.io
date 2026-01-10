@@ -52,25 +52,35 @@ theme = "PaperMod"
     EditPost = { URL = "https://github.com/Hughpig/my-blog/blob/main/content", Text = "编辑此页" } # 顺便加个编辑按钮
     ShowScrollToTop = true # 开启回到顶部按钮
 
-    # --- 首页精修 (Profile Mode) ---
+# --- 首页精修 (Profile Mode) ---
     [params.profileMode]
         enabled = true
         title = "👋 欢迎来到我的 Code Space"
         subtitle = "Input: 咖啡 & 代码 | Output: 题解 & 折腾"
-        imageUrl = "https://github.com/Hughpig.png" # 自动抓取GitHub头像
+        imageUrl = "https://github.com/Hughpig.png"
         imageWidth = 120
         imageHeight = 120
+
         [[params.profileMode.buttons]]
-            name = "📜 文章归档"
+            name = "📜 文章"
             url = "posts"
         [[params.profileMode.buttons]]
-            name = "🏷️ 标签分类"
-            url = "tags"
+            name = "🔍 搜索"
+            url = "search"
+        [[params.profileMode.buttons]]
+            name = "📅 归档"
+            url = "archives"
 
     # --- 社交图标 ---
     [[params.socialIcons]]
         name = "github"
         url = "https://github.com/Hughpig"
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:3918967988@qq.com"
+    [[params.socialIcons]]
+        name = "zhihu"
+        url = "https://www.zhihu.com/people/hughpig"
 
     # --- KaTeX 数学公式支持 ---
     # PaperMod 内置了对数学公式的判断，这里开启全局开关
