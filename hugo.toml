@@ -1,4 +1,4 @@
-baseURL = "https://hughpig.github.io/" # 记得改成你实际的地址
+baseURL = "https://hughpig.github.io/"
 languageCode = 'zh-cn'                  # 改成中文，避免显示 "Read More"
 title = '退役 OIer 的荒原'                # 你的网站标题
 theme = "PaperMod"
