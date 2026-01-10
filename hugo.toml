@@ -1,0 +1,97 @@
+baseURL = 'https://hughpig.github.io/' # 记得改成你实际的地址
+languageCode = 'zh-cn'                  # 改成中文，避免显示 "Read More"
+title = '退役 OIer 的荒原'                # 你的网站标题
+theme = "PaperMod"
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
+
+[[menu.main]]
+    identifier = "posts"
+    name = "📝 文章"
+    url = "/posts"
+    weight = 10
+
+[[menu.main]]
+    identifier = "archives"
+    name = "📅 归档"
+    url = "/archives"
+    weight = 20
+
+[[menu.main]]
+    identifier = "tags"
+    name = "🏷️ 标签"
+    url = "/tags"
+    weight = 30
+
+[[menu.main]]
+    identifier = "search"
+    name = "🔍 搜索"
+    url = "/search"
+    weight = 40
+
+[params]
+    env = "production"
+    # --- 基础美化 ---
+    defaultTheme = "auto"         # 随系统自动切换黑白模式
+    showCodeCopyButtons = true    # 代码块一键复制，OIer 必备
+    showFullTextContent = false   # 首页只显示摘要
+    paginate = 10                 # 每页显示几篇文章
+
+    showToc = true         # 全局开启目录
+    TocOpen = false        # 默认折叠目录（如果你希望页面更整洁）
+
+    ShowReadingTime = true
+    ShowWordCount = true
+    ShowPostNavLinks = true # 底部显示“上一篇/下一篇”
+
+    # ... 其他配置 ...
+    showBreadCrumbs = true # 开启面包屑导航，能让标签页更有层次感
+
+    # --- 首页精修 (Profile Mode) ---
+    [params.profileMode]
+        enabled = true
+        title = "👋 欢迎来到我的 Code Space"
+        subtitle = "Input: 咖啡 & 代码 | Output: 题解 & 折腾"
+        imageUrl = "https://github.com/Hughpig.png" # 自动抓取GitHub头像
+        imageWidth = 120
+        imageHeight = 120
+        [[params.profileMode.buttons]]
+            name = "📜 文章归档"
+            url = "posts"
+        [[params.profileMode.buttons]]
+            name = "🏷️ 标签分类"
+            url = "tags"
+
+    # --- 社交图标 ---
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/Hughpig"
+
+    # --- KaTeX 数学公式支持 ---
+    # PaperMod 内置了对数学公式的判断，这里开启全局开关
+    math = true
+
+# --- 代码高亮配置 ---
+[markup.highlight]
+    noClasses = false
+    style = "monokai" # 经典的黑底高亮，很有写代码的感觉
+    lineNos = true    # 显示行号
+
+# --- 让 Markdown 渲染更智能 ---
+[markup.goldmark.renderer]
+    unsafe = true # 允许在 Markdown 里写简单的 HTML（比如居中一张图片）
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"] # 必须加 JSON 才能生成搜索索引
+
+[params.fuseOpts] # 搜索算法配置（可选，默认就很强）
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 100
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
