@@ -49,10 +49,6 @@ theme = "PaperMod"
 
     # ... 其他配置 ...
     showBreadCrumbs = true # 开启面包屑导航，能让标签页更有层次感
-    [params.editPost]
-        url = "https://github.com/Hughpig/Hughpig.github.io/edit/main/content" # 结尾不加斜杠也可以，如果下面开启了 append
-        text = "📝 编辑此页"
-        appendFilePath = true # 关键点：强制 Hugo 把文件路径拼上去
     ShowScrollToTop = true # 开启回到顶部按钮
 
 # --- 首页精修 (Profile Mode) ---
