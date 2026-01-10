@@ -1,1 +1,4 @@
 public/
+deploy.ps1
+resources/
+.hugo_build.lock

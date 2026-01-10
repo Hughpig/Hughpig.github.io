@@ -11,3 +11,13 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+/* 当屏幕够宽时，让目录浮动在侧边 */
+@media screen and (min-width: 1280px) {
+    .toc {
+        position: fixed;
+        left: calc((100% - 1280px) / 2 + 880px); /* 根据 PaperMod 宽度微调 */
+        top: 120px;
+        width: 250px;
+    }
+}
